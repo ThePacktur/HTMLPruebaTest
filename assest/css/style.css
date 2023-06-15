@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+  
+    margin: 0%;
+    padding: 0%;
+  
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  
+  
+  h1 {
+    
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  
+  body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  
+  }
+  
+  form {
+    position: relative;
+  
+    max-width: 400px;
+  
+    margin: 6vh auto;
+    padding: 3em 2em;
+    box-shadow: 0 0 20px rgb(6, 32, 65);
+    min-height: 50vh;
+    border-radius: 20px;
+    background: transparent;
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(19, 10, 41, 0.5);
+  }
+  
+  form div {
+    margin-bottom: 5px;
+    color: rgb(7, 7, 7);
+  
+  }
+  
+  
+  
+  form div>span,
+  form div>label,
+  form div>input {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+  
+  }
+  
+  form div>label {
+    margin-top: 3px;
+    padding: 2px 6px;
+  }
+  
+  form div>input,
+  button {
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid #2c2a2a;
+  }
+  
+  selectGen::part(button) {
+    color: rgb(27, 22, 22);
+    background-color: #f00;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  selectGen::part(listbox) {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+  }
+  
+  label span {
+    color: rgb(25, 26, 26);
+  }
+  
+  label input:checked+span {
+    color: rgb(233, 156, 156);
+  }
+  
+  #contenedorTabla {
+  
+    position: relative;
+  
+    max-width: 600px;
+  
+    margin: 6vh auto;
+    padding: 3em 2em;
+    box-shadow: 0 0 20px rgb(185, 101, 157);
+    min-height: 50vh;
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0, 0, 0, .5);
+  }
+  
+  #cb_validation:empty {
+    display: none;
+  }
+  
+  #cb_validation {
+    background: transparent;
+    color: rgb(39, 7, 7);
+    padding: 6px 10px;
+    margin: 5px 0;
+    display: block;
+  }
+  
+  .buttonRegister {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 3px 2px 1px #9daef5;
+    -webkit-box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #666666;
+    box-shadow: 6px 5px 24px #666666;
+    font-family: Arial;
+    color: #0a0a0a;
+    font-size: 27px;
+    padding: 10px;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15PX;
+    margin: 24PX;
+    cursor: pointer;
+  }

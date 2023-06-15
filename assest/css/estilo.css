@@ -1,0 +1,29 @@
+.day{
+    background-color: rgb(255, 248, 248);
+    color: rgb(26, 25, 25) ;
+}
+
+.nigth{
+    background-color: rgb(26, 25, 25);
+    color: rgb(255, 248, 248);
+    
+}
+form {
+    position: relative;
+  
+    max-width: 400px;
+  
+    margin: 6vh auto;
+    padding: 3em 2em;
+    box-shadow: 0 0 20px rgb(6, 32, 65);
+    min-height: 50vh;
+    border-radius: 20px;
+    background: transparent;
+    background-image: -webkit-linear-gradient(top, #eb9494, #5e20b0);
+    background-image: -moz-linear-gradient(top, #eb9494, #4620b0);
+    background-image: -ms-linear-gradient(top, #eb9a94, #20b098);
+    background-image: -o-linear-gradient(top, #eb9494, #8e20b0);
+    background-image: linear-gradient(to bottom, #e194eb, #2046b0);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(19, 10, 41, 0.5);
+  }
