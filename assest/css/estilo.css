@@ -1,20 +1,35 @@
-.day{
-    background-color: rgb(255, 248, 248);
-    color: rgb(26, 25, 25) ;
+.day {
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 25, 25);
+
+
+
 }
 
-.nigth{
+.nigth {
     background-color: rgb(26, 25, 25);
-    color: rgb(255, 248, 248);
-    
+    color: rgb(255, 255, 255);
+
 }
+
+.joyas2023{
+    display: flex;
+    width: auto;
+    padding: auto;
+    font-size: large;
+    margin: center;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
 form {
     position: relative;
-  
+
     max-width: 400px;
-  
+
     margin: 6vh auto;
-    padding: 3em 2em;
+    padding: 3em 3em;
     box-shadow: 0 0 20px rgb(6, 32, 65);
     min-height: 50vh;
     border-radius: 20px;
@@ -26,4 +41,36 @@ form {
     background-image: linear-gradient(to bottom, #e194eb, #2046b0);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(19, 10, 41, 0.5);
-  }
+}
+
+form div {
+    margin-bottom: 5px;
+    color: rgb(54, 12, 121);
+    width: 90%;
+    border: #5e20b0;
+    
+}
+
+
+
+form div>span,
+form div>label,
+form div>input {
+    display: block;
+    width: 90%;
+    margin-bottom: 2px;
+
+}
+
+form div>label {
+
+    margin-top: 3px;
+    padding: 2px 6px;
+}
+
+form div>input,
+button {
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid #2c2a2a;
+}
