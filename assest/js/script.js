@@ -96,6 +96,44 @@ var loginTable = (listadoNuevo) => {
 
     }
 }
+
+var registrar = () => {
+    let eNombre = document.getElementById("nombre");
+    let eArchivo = document.getElementById("archivo");
+    let eEmail = document.getElementById("email");
+    let eGen = document.getElementById("gen");
+    let eCumple = document.getElementById("nacimiento");
+    let eCell = document.getElementById("cell");
+    let nombre = eNombre.value;
+    let archivo = eArchivo.value;
+    let email = eEmail.value;
+    let gen = eGen.value;
+    let nacimiento = eCumple.value;
+    let cell = eCell.value;
+    console.log(nombre);
+    console.log(archivo);
+    console.log(email);
+    console.log(gen);
+    console.log(nacimiento);
+    console.log(cell)
+    //console.log(persona)
+    let listadoAntiguoStr = localStorage.getItem("clientes");
+    let listaAntiguo = JSON.parse(listadoAntiguoStr);
+    console.log(listaAntiguo)
+    if (listaAntiguo == null) {
+        let persona = { "id": 0, "nombre": nombre, "archivo": archivo, "email": email, "genero": gen, "DATE": nacimiento, "cell":cell };
+        var listadoNuevo = [persona]
+    } else {
+        let persona = { "id": listaAntiguo.length, "nombre": nombre, "archivo": archivo.length, "email": email, "genero": gen, "DATE": nacimiento, "cell":cell };
+        var listadoNuevo = [...listaAntiguo, persona]
+    }
+    console.log(listadoNuevo)
+    localStorage.setItem("clientes", JSON.stringify(listadoNuevo));
+    //Tabla
+    loginTable(listadoNuevo)
+    
+
+}
 var modificar = (listadoNuevo) => {
     console.log("loooog")
     let eNombre = document.getElementById("nombre");
@@ -144,43 +182,7 @@ var eliminar = (listadoNuevo) => {
 
 
 
-var registrar = () => {
-    let eNombre = document.getElementById("nombre");
-    let eArchivo = document.getElementById("archivo");
-    let eEmail = document.getElementById("email");
-    let eGen = document.getElementById("gen");
-    let eCumple = document.getElementById("nacimiento");
-    let eCell = document.getElementById("cell");
-    let nombre = eNombre.value;
-    let archivo = eArchivo.value;
-    let email = eEmail.value;
-    let gen = eGen.value;
-    let nacimiento = eCumple.value;
-    let cell = eCell.value;
-    console.log(nombre);
-    console.log(archivo);
-    console.log(email);
-    console.log(gen);
-    console.log(nacimiento);
-    console.log(cell)
-    //console.log(persona)
-    let listadoAntiguoStr = localStorage.getItem("clientes");
-    let listaAntiguo = JSON.parse(listadoAntiguoStr);
-    console.log(listaAntiguo)
-    if (listaAntiguo == null) {
-        let persona = { "id": 0, "nombre": nombre, "archivo": archivo, "email": email, "genero": gen, "DATE": nacimiento, "cell":cell };
-        var listadoNuevo = [persona]
-    } else {
-        let persona = { "id": listaAntiguo.length, "nombre": nombre, "archivo": archivo.length, "email": email, "genero": gen, "DATE": nacimiento, "cell":cell };
-        var listadoNuevo = [...listaAntiguo, persona]
-    }
-    console.log(listadoNuevo)
-    localStorage.setItem("clientes", JSON.stringify(listadoNuevo));
-    //Tabla
-    loginTable(listadoNuevo)
-    
 
-}
 var obtenerDatos = () => {
     let listadoAntiguoStr = localStorage.getItem("clientes");
     let listaAntiguo = JSON.parse(listadoAntiguoStr);

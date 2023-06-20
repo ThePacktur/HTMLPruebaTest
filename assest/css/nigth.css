@@ -1,5 +1,3 @@
-@import "../css/nigth.css";
-
 * {
 
     box-sizing: border-box;
@@ -12,12 +10,14 @@
 
 }
 
-.day {
-    background-color: rgb(255, 255, 255);
-    color: rgb(26, 25, 25);
+.nigth {
+    background-color: rgb(26, 25, 25);
+    color: rgb(255, 255, 255);
 
-
+    
 }
+
+
 #argollas {
     float: left;
     width: 100px;
@@ -25,10 +25,10 @@
 }
 
 .joyas2023 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(15, 15, 15);
     display: block;
     width: auto;
-    color: rgb(26, 25, 25);
+    color: rgb(247, 245, 245);
     padding: auto;
     font-size: large;
     margin: center;
@@ -37,29 +37,13 @@
 }
 
 
-
-#btnConstraste {
-    border: 10px, red;
-    border-radius: 50%;
-    border-left-color: transparent;
-    padding-top: 1px;
-    padding-right: -88px;
-    width: 88px;
-    height: 80px;
-}
-
-
-
-
-
 form div {
     margin-bottom: 5px;
-    color: rgb(54, 12, 121);
+    color: rgb(76, 248, 53);
     width: 90%;
-    border: #5e20b0;
+    border: #5c3d02;
 
 }
-
 form {
     position: relative;
 
@@ -67,17 +51,17 @@ form {
 
     margin: 6vh auto;
     padding: 3em 3em;
-    box-shadow: 0 0 20px rgb(6, 32, 65);
+    box-shadow: 0 0 20px rgb(146, 255, 44);
     min-height: 50vh;
     border-radius: 20px;
     background: transparent;
-    background-image: -webkit-linear-gradient(top, #eb9494, #5e20b0);
-    background-image: -moz-linear-gradient(top, #eb9494, #4620b0);
-    background-image: -ms-linear-gradient(top, #eb9a94, #20b098);
-    background-image: -o-linear-gradient(top, #eb9494, #8e20b0);
-    background-image: linear-gradient(to bottom, #e194eb, #2046b0);
+    background-image: -webkit-linear-gradient(top, #31f500, #0b08b3);
+    background-image: -moz-linear-gradient(top, #4c9719, #be5906);
+    background-image: -ms-linear-gradient(top, #3eff03, #04fad1);
+    background-image: -o-linear-gradient(top, #1acc23, #8e20b0);
+    background-image: linear-gradient(to bottom, #61076d, #f5aa63);
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(19, 10, 41, 0.5);
+    box-shadow: 0 0 30px rgba(79, 10, 252, 0.5);
 }
 
 
@@ -100,5 +84,5 @@ form div>input,
 button {
     padding: 4px 10px;
     border-radius: 3px;
-    border: 1px solid #2c2a2a;
+    border: 1px solid #f00303;
 }
