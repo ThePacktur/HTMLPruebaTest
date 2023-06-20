@@ -3,21 +3,39 @@
 * {
 
     box-sizing: border-box;
-  
+
     margin: 0%;
     padding: 0%;
-  
+
     font-family: Georgia, 'Times New Roman', Times, serif
-
-
 }
 
+nav ul {
+  list-style: none;
+  overflow: hidden; 
+}
+
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li:hover {
+  background: #f5b2ef83;
+}
 .day {
     background-color: rgb(255, 255, 255);
     color: rgb(26, 25, 25);
 
 
 }
+
 #argollas {
     float: left;
     width: 100px;

@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Document</title>
     <link rel="stylesheet" href="assest/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assest/css/estilo.css" />
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -17,53 +18,72 @@
 
 <body class="day">
 
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-            <img src="assest/img/logoF.png" class="flex-shrink-0 me-3" alt="img-thumbnail" width="100">
-            <h5 class="text-white h4">Saturina</h5>
-
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
-
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#somos">Nosotros.</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#vendemos">Que Vendemos.</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#joyas2023">Coleccion Joyas 2023.</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#redSocial">Estamos Conectados.</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#formulario">Formulario.</a>
-                    <!-- # hace refencia a link de la pagina.-->
-                </li>
-                </li>
-            </ul>
-            <span class="text-muted">Conmutable a través de navbar brand.</span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="assest/img/logoF.png" class="flex-shrink-0 me-3" alt="img-thumbnail" width="150">
+            <span class="sr-only"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Inicio</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#somos">Nosotros.</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#vendemos">Que Vendemos.</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#joyas2023">Coleccion Joyas 2023.</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#redSocial">Estamos Conectados.</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#formulario">Formulario.</a>
+                <!-- # hace refencia a link de la pagina.-->
+            </li>
+            
+          </ul>
+          <span class="navbar-">
+            sign in </span>
         </div>
-    </div>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+      </nav>
+
 
 
 
     <button id="btnConstraste" value="d"><img width="80" height="80"
             src="https://img.icons8.com/dotty/80/day-and-night.png" alt="day-and-night" />NigthMode</button><br><br>
 
-    <section id="somos">
+            <div class="dropdown-menu">
+                <form class="px-4 py-3">
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormEmail1" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleDropdownFormPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Recuérdame
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">¿Nuevo por aquí? Regístrate</a>
+                <a class="dropdown-item" href="#">¿Se te olvidó tu contraseña?</a>
+              </div>
+
+            <section id="somos">
         <div class="d-flex position-relative">
             <img src="assest/img/logoF.png" class="flex-shrink-0 me-3" alt="img-thumbnail" width="200">
             <div>
@@ -254,6 +274,7 @@
                 </span>
             </div>
         </form>
+      
     </section>
     <datalist id="listatelefonos">
 

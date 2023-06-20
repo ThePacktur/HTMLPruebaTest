@@ -10,6 +10,27 @@
 
 }
 
+
+nav ul {
+    list-style: none;
+    overflow: hidden; 
+  }
+  
+  nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #201e1e;
+    text-decoration: none;
+  }
+  nav ul li:hover {
+    background: #70036783;
+  }
+
 .nigth {
     background-color: rgb(26, 25, 25);
     color: rgb(255, 255, 255);
@@ -44,6 +65,7 @@ form div {
     border: #5c3d02;
 
 }
+
 form {
     position: relative;
 
