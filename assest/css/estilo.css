@@ -1,4 +1,4 @@
-@import "../css/nigth.css";
+@import "nigth.css";
 
 * {
 
@@ -7,28 +7,40 @@
     margin: 0%;
     padding: 0%;
 
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: 'Open Sans', sans-serif;}
+
+textarea {
+    resize: none;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 nav ul {
-  list-style: none;
-  overflow: hidden; 
+    list-style: none;
+    overflow: hidden;
+    color: #542161;
 }
 
 nav ul li {
-  float: left;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #eb94d0;
 }
+
 nav ul li a {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
 }
+
 nav ul li:hover {
-  background: #f5b2ef83;
+    background: #f5b2ef83;
+    color: #ffffff;
 }
+
 .day {
     background-color: rgb(255, 255, 255);
     color: rgb(26, 25, 25);
@@ -43,7 +55,7 @@ nav ul li:hover {
 }
 
 .joyas2023 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 224, 224);
     display: block;
     width: auto;
     color: rgb(26, 25, 25);
@@ -51,67 +63,196 @@ nav ul li:hover {
     font-size: large;
     margin: center;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.card{
+    
+    display: block;
+    width: auto;
+    padding: 16px, 22px;
+    border-color: #eb94d0;
+    margin: auto;
+
+
+}
+html {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
+.desText{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: auto;
+    margin: 0%;
+}
 
-#btnConstraste {
-    border: 10px, red;
-    border-radius: 50%;
-    border-left-color: transparent;
-    padding-top: 1px;
-    padding-right: -88px;
-    width: 88px;
-    height: 80px;
+h1 {
+   
+   
+    font-size: 30px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.btn-flotante {
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	border-radius: 5px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: #542161; /* Color de fondo */
+	padding: 18px 30px; /* Relleno del boton */
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 99;
+}
+.btn-flotante:hover {
+	background-color: #85a52c; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(19, 18, 18, 0.3);
+	transform: translateY(-7px);
+    color: #1a1217;
+}
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
 }
 
 
-
-
-
-form div {
-    margin-bottom: 5px;
-    color: rgb(54, 12, 121);
-    width: 90%;
-    border: #5e20b0;
-
-}
 
 form {
     position: relative;
 
-    max-width: 400px;
+    max-width: 600px;
 
     margin: 6vh auto;
-    padding: 3em 3em;
+    padding: 3em 2em;
     box-shadow: 0 0 20px rgb(6, 32, 65);
-    min-height: 50vh;
+    min-height: 250vh;
     border-radius: 20px;
     background: transparent;
-    background-image: -webkit-linear-gradient(top, #eb9494, #5e20b0);
-    background-image: -moz-linear-gradient(top, #eb9494, #4620b0);
-    background-image: -ms-linear-gradient(top, #eb9a94, #20b098);
-    background-image: -o-linear-gradient(top, #eb9494, #8e20b0);
-    background-image: linear-gradient(to bottom, #e194eb, #2046b0);
+    background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+    background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(19, 10, 41, 0.5);
 }
 
-
-form div>span,
-form div>label,
-form div>input {
-    display: block;
-    width: 90%;
-    margin-bottom: 2px;
+form div {
+    margin-bottom: 5px;
+    color: rgb(7, 7, 7);
 
 }
 
-form div>label {
+#nombreError {
+    display: none;
+    font-size: 0.8em;
+}
 
-    margin-top: 3px;
-    padding: 2px 6px;
+#nombreError.visible {
+    display: block;
+}
+
+
+input.invalido {
+    border-color: red;
+}
+
+#emailError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#emaiError.visible {
+    display: block;
+}
+
+
+input.invalido {
+    border-color: red;
+}
+
+#genError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#genError.visible {
+    display: block;
+}
+
+input.invalido {
+    border-color: red;
+}
+
+#cumpleError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#cumpleError.visible {
+    display: block;
+}
+
+input.invalido {
+    border-color: red;
+}
+
+#cellError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#cellError.visible {
+    display: block;
+}
+
+input.invalido {
+    border-color: red;
+}
+
+#checkError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#checkError.visible {
+    display: block;
+}
+
+input.invalido {
+    border-color: red;
+}
+
+#descripError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#descripError.visible {
+    display: block;
+}
+
+
+
+input.invalido {
+    border-color: red;
 }
 
 form div>input,

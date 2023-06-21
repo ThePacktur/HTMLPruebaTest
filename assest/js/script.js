@@ -34,19 +34,22 @@ var loginTable = (listadoNuevo) => {
     let eGen = document.getElementById("gen");
     let eCumple = document.getElementById("nacimiento");
     let eCell = document.getElementById("cell");
+    let eDesccrip = document.getElementById("descripcion");
 
     render = "<table>"
-    render += "<tr><th>Nombre</th><th>Archivo</th><th>Email</th><th>Genero</th><th>DATE</th><th>Telefono</th><th>Accion</th></tr>"
+    render += "<tr><th>Nombre</th><th>Archivo</th><th>Email</th><th>Genero</th><th>DATE</th><th>Telefono</th><th>Checkbox</th><td>Mensaje</td><th>Accion</th></tr>"
     for (let i = 0; i < listadoNuevo.length; i++) {
         const element = listadoNuevo[i];
-        
+
         render += "<tr>"
         render += "<td>" + element.nombre + "</td>";
         render += "<td>" + element.archivo + "</td>";
-        render += "<td>"+element.email+"</td>";
-        render += "<td>"+element.gen+"</td>";
-        render += "<td>"+element.nacimiento+ "</td>";
-        render += "<td>"+element.cell+"</td>";
+        render += "<td>" + element.email + "</td>";
+        render += "<td>" + element.gen + "</td>";
+        render += "<td>" + element.nacimiento + "</td>";
+        render += "<td>" + element.cell + "</td>";
+        render += "<td>" + element.check +"</td>";
+        render += "<td>" + element.decripcion + "</td>";
         render += "<td>"
         render += "<button id='btnEditar" + i + "'>Editar</button>"
         render += "<button id='btnEliminar" + i + "'>Eliminar</button>"
@@ -73,6 +76,7 @@ var loginTable = (listadoNuevo) => {
             eGen.value = element.gen;
             eCumple = element.nacimiento;
             eCell = element.cell;
+            eDesccrip = element.descripcion;
         })
 
         var eBtnEliminar = document.getElementById("btnEliminar" + i);
@@ -91,6 +95,7 @@ var loginTable = (listadoNuevo) => {
             eGen.value = element.gen;
             eCumple = element.nacimiento;
             eCell = element.cell;
+            eDesccrip = element.decripcion;
         })
 
 
@@ -104,36 +109,55 @@ var registrar = () => {
     let eGen = document.getElementById("gen");
     let eCumple = document.getElementById("nacimiento");
     let eCell = document.getElementById("cell");
+    let eCheck = document.getElementById("cb_validation");
+    let eDesccrip = document.getElementById("descripcion");
     let nombre = eNombre.value;
     let archivo = eArchivo.value;
     let email = eEmail.value;
     let gen = eGen.value;
     let nacimiento = eCumple.value;
     let cell = eCell.value;
+    let check = eCheck;
+    let descripcion = eDesccrip;
     console.log(nombre);
     console.log(archivo);
     console.log(email);
     console.log(gen);
     console.log(nacimiento);
     console.log(cell)
+    console.log(check)
+    console.log(descripcion)
     //console.log(persona)
     let listadoAntiguoStr = localStorage.getItem("clientes");
     let listaAntiguo = JSON.parse(listadoAntiguoStr);
     console.log(listaAntiguo)
+
+    
     if (listaAntiguo == null) {
-        let persona = { "id": 0, "nombre": nombre, "archivo": archivo, "email": email, "genero": gen, "DATE": nacimiento, "cell":cell };
+        let persona = { "id": 0, "nombre": nombre, "archivo": archivo, "email": email, "genero": gen, "DATE": nacimiento, "cell": cell, "Checkbox":check, "descripcion": descripcion };
         var listadoNuevo = [persona]
     } else {
-        let persona = { "id": listaAntiguo.length, "nombre": nombre, "archivo": archivo.length, "email": email, "genero": gen, "DATE": nacimiento, "cell":cell };
+        let persona = { "id": listaAntiguo.length, "nombre": nombre, "archivo": archivo.length, "email": email, "genero": gen, "DATE": nacimiento, "cell": cell, "checkbox":check, "descripcion": descripcion };
         var listadoNuevo = [...listaAntiguo, persona]
     }
     console.log(listadoNuevo)
     localStorage.setItem("clientes", JSON.stringify(listadoNuevo));
     //Tabla
     loginTable(listadoNuevo)
-    
+
 
 }
+
+function checkClickFunc()
+{
+ var checkbox = document.getElementById('cb_validation');
+ if (checkbox.checked == true)
+ {
+  alert("Checkbox is clicked");
+ }
+}
+
+
 var modificar = (listadoNuevo) => {
     console.log("loooog")
     let eNombre = document.getElementById("nombre");
@@ -142,6 +166,8 @@ var modificar = (listadoNuevo) => {
     let eGen = document.getElementById("gen");
     let eCumple = document.getElementById("nacimiento");
     let eCell = document.getElementById("cell");
+    let eCheck = document.getElementById("cb_validation");
+    let eDesccrip = document.getElementById("descripcion");
     let eBtnEditarUp = document.getElementById("btnEditar");
 
     console.log("Editando...");
@@ -151,6 +177,8 @@ var modificar = (listadoNuevo) => {
     let gen = eGen.value;
     let nacimiento = eCumple.value;
     let cell = eCell.value;
+    let check = eCheck.value;
+    let descripcion = eDesccrip.value;
     let indice = eBtnEditarUp.value;
     console.log(nombre);
     console.log(archivo);
@@ -158,14 +186,18 @@ var modificar = (listadoNuevo) => {
     console.log(gen);
     console.log(nacimiento);
     console.log(cell);
+    console.log(check);
+    console.log(descripcion);
     console.log(indice);
-    
+
     listadoNuevo[indice].nombre = nombre;
     listadoNuevo[indice].archivo = archivo;
-    listadoNuevo[indice].email = email
-    listadoNuevo[indice].gen = gen
-    listadoNuevo[indice].nacimiento = nacimiento
-    listadoNuevo[indice].cell = cell
+    listadoNuevo[indice].email = email;
+    listadoNuevo[indice].gen = gen;
+    listadoNuevo[indice].nacimiento = nacimiento;
+    listadoNuevo[indice].cell = cell;
+    listadoNuevo[indice].check = check;
+    listadoNuevo[indice].descripcion = descripcion;
     localStorage.setItem('clientes', JSON.stringify(listadoNuevo))
     loginTable(listadoNuevo);
 }
@@ -188,6 +220,78 @@ var obtenerDatos = () => {
     let listaAntiguo = JSON.parse(listadoAntiguoStr);
     loginTable(listaAntiguo)
 }
+
+const enviar = document.getElementById("btnRegister");
+function validar(e){
+    e.preventDefault();  
+    const campoNombre = document.getElementById("nombre");
+    const eArchivo = document.getElementById("archivo");
+    const eEmail = document.getElementById("email");
+    const eGen = document.getElementById("gen");
+    const eCumple = document.getElementById("nacimiento");
+    const eCell = document.getElementById("cell");
+    const eCheck = document.getElementById("cb_validation");
+    const eDesccrip = document.getElementById("descripcion");
+    
+    let valido = true;
+  
+    if (!campoNombre.value) {
+      const nombreError = document.getElementById("nombreError");
+      
+      nombreError.classList.add("visible");
+      campoNombre.classList.add("invalido");
+      nombreError.setAttribute("aria-hidden", false);
+      nombreError.setAttribute("aria-invalid", true);
+    }else if(!eArchivo.value){
+        const archivoError = document.getElementById("archivoError");
+       archivoError.classList.add("visible");
+       eArchivo.classList.add("visible");
+       archivoError.setAttribute("ara-hidden",false);
+       archivoError.setAttribute("aria-invalid",true);
+    }else if(!eEmail.value){
+        const emailError = document.getElementById("emailError");
+      emailError.classList.add("visible");
+       eEmail.classList.add("visible");
+       emailError.setAttribute("ara-hidden",false);
+       emailError.setAttribute("aria-invalid",true);
+    }else if(!eGen.value){
+        const genError = document.getElementById("genError");
+       genError.classList.add("visible");
+       eGen.classList.add("visible");
+       genError.setAttribute("ara-hidden",false);
+       genError.setAttribute("aria-invalid",true);
+    }else if(!eCumple.value){
+        const cumpleError = document.getElementById("cumpleError");
+       cumpleError.classList.add("visible");
+       eCumple.classList.add("visible");
+       cumpleError.setAttribute("ara-hidden",false);
+       cumpleError.setAttribute("aria-invalid",true);
+    }else if(!eCell.value){
+        const cellError = document.getElementById("cellError");
+       cellError.classList.add("visible");
+       eCell.classList.add("visible");
+       cellError.setAttribute("ara-hidden",false);
+       cellError.setAttribute("aria-invalid",true);
+    }else if(!eCheck.value){
+        const checkError = document.getElementById("checkError");
+       checkError.classList.add("visible");
+       eCheck.classList.add("visible");
+       checkError.setAttribute("ara-hidden",false);
+       checkError.setAttribute("aria-invalid",true);
+    }else if(!eDesccrip.value){
+        const descripError = document.getElementById("descripError");
+       descripError.classList.add("visible");
+       eDesccrip.classList.add("visible");
+       descripError.setAttribute("ara-hidden",false);
+       descripError.setAttribute("aria-invalid",true);
+    }
+    return valido;
+    
+  }
+
+
+
 document.getElementById("btnConstraste").addEventListener('click', changeConstraste);
 document.getElementById("btnRegister").addEventListener("click", registrar);
 addEventListener('load', obtenerDatos);
+enviar.addEventListener("click",validar);

@@ -9,7 +9,12 @@
 
 
 }
-
+.desText{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: auto;
+    margin: 0%;
+      
+}
 
 nav ul {
     list-style: none;
@@ -30,6 +35,15 @@ nav ul {
   nav ul li:hover {
     background: #70036783;
   }
+
+  nav ul li a::after {
+    display: block;
+    padding: 10px;
+    color: #fffafa;
+    text-decoration: none;
+  }
+
+
 
 .nigth {
     background-color: rgb(26, 25, 25);
@@ -65,7 +79,7 @@ form div {
     border: #5c3d02;
 
 }
-
+/*
 form {
     position: relative;
 
@@ -84,7 +98,7 @@ form {
     background-image: linear-gradient(to bottom, #61076d, #f5aa63);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(79, 10, 252, 0.5);
-}
+}*/
 
 
 form div>span,

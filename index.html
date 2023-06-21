@@ -8,82 +8,89 @@
     <title>Document</title>
     <link rel="stylesheet" href="assest/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assest/css/estilo.css" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 
 
 
 </head>
 
 <body class="day">
+    <!--inicio menu-->
+    <nav class="navbar navbar-expand-md navbar-ligth bg-ligth">
+        <div class="container-fluid">
+            <!--icono-->
+            <a class="navbar-brand" href="#"><img src="assest/img/logoF.png" class="flex-shrink-0 me-3"
+                    alt="img-thumbnail" width="150">
+                <i class="bi bi-flower1"></i>
+                <span>Saturina</span>
+            </a>
+            <!--boton menu-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="assest/img/logoF.png" class="flex-shrink-0 me-3" alt="img-thumbnail" width="150">
-            <span class="sr-only"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"> Inicio</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#somos">Nosotros.</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#vendemos">Que Vendemos.</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#joyas2023">Coleccion Joyas 2023.</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#redSocial">Estamos Conectados.</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#formulario">Formulario.</a>
-                <!-- # hace refencia a link de la pagina.-->
-            </li>
-            
-          </ul>
-          <span class="navbar-">
-            sign in </span>
+            <!--Elementos del menu colpsables-->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> Inicio</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#somos">Nosotros.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vendemos">Que Vendemos.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#joyas2023">Coleccion Joyas 2023.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#redSocial">Estamos Conectados.</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formulario">Formulario.</a>
+                        <!-- # hace refencia a link de la pagina.-->
+
+            </div>
+
         </div>
-      </nav>
+    </nav>
+
+    <button id="btnConstraste" value="d"><a href="#" class="btn-flotante">NigthMode</a></button>
 
 
-
-
-    <button id="btnConstraste" value="d"><img width="80" height="80"
-            src="https://img.icons8.com/dotty/80/day-and-night.png" alt="day-and-night" />NigthMode</button><br><br>
-
-            <div class="dropdown-menu">
-                <form class="px-4 py-3">
-                  <div class="mb-3">
-                    <label for="exampleDropdownFormEmail1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleDropdownFormPassword1" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
-                  </div>
-                  <div class="mb-3">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                      <label class="form-check-label" for="dropdownCheck">
+    <div class="dropdown-menu">
+        <form class="px-4 py-3">
+            <div class="mb-3">
+                <label for="exampleDropdownFormEmail1" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
                         Recuérdame
-                      </label>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Ingresar</button>
-                </form>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">¿Nuevo por aquí? Regístrate</a>
-                <a class="dropdown-item" href="#">¿Se te olvidó tu contraseña?</a>
-              </div>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">¿Nuevo por aquí? Regístrate</a>
+        <a class="dropdown-item" href="#">¿Se te olvidó tu contraseña?</a>
+    </div>
 
-            <section id="somos">
+    <section id="somos">
         <div class="d-flex position-relative">
             <img src="assest/img/logoF.png" class="flex-shrink-0 me-3" alt="img-thumbnail" width="200">
             <div>
@@ -113,102 +120,105 @@
                 <a href="#joyas2023" class="btn btn-primary stretched-link">Ver nuestra coleccion.</a>
             </div>
         </div>
-
-
-
-    </section>
-
-
-
+    </section><br>
+    <span>
+        <h1 class="desText">Los aros de plata son esenciales en el cofre de joyas de cualquier mujer.
+            Le da una perfección a cualquier look y enmarcan el rostro de una mejor manera.
+            Muchas mujeres eligen combinarlos fácilmente con un buen colgante.</h1><img src="assest/img/colgante.jpeg"
+            width="500px" style="margin-left: 40px;"><img style="margin-left: 69px;"
+            src="assest/img/pendienteViolet.jpeg" width="500px">
+    </span>
     <section id="joyas2023">
         <div id="carouselExampleDark" class="carousel carousel-dark slide" style="padding: 34%;">
-            <h1>
-                Tipos de joyas:
-            </h1>
+
+            <div class="text-center">
+                <h1>Coleccion Joyas 2023.</h1><br>
+                <p>muchas de nustras colecciones son unicas y personalizada,</p>
+                <img src="assest/img/Joya.jpeg" class="rounded" alt="img" width="300" height="300"><br>
+                <h2>Algunas de nuestras colecciones.</h2>
+                <h3>para los distintos gustos y estilos.</h3>
+                <img src="assest/img/colgante.jpeg" class="rounded" alt="img" width="300" height="300">
+                <img src="assest/img/aros.jpeg" class="rounded" alt="img" width="300" height="300"><br>
+                <br>
+                <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                    <!--  <iframe src="https://www.youtube.com/embed/5aShTpbFly0" title="YouTube video" allowfullscreen></iframe>
+                    -->
+                </div>
 
 
+                <h1>
+                    Tipos de joyas:
+                </h1>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="assest/img/anillos.jpeg" class="d-block w-100" alt="img-thumbnail">
+                        <div class="carousel-caption d-none d-md-block"><br>
 
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="assest/img/anillos.jpeg" class="d-block w-100" alt="img-thumbnail">
-                    <div class="carousel-caption d-none d-md-block"><br>
-
-                        <h5>Anillos con piedras </h5>
-                        <p>Hermosa colecciones de anillos de plata decorados con piedras hermosas como el onix.</p>
+                            <h5 style="color: beige;">Anillos con piedras </h5>
+                            <p style="color: beige;">Hermosa colecciones de anillos de plata decorados con piedras
+                                hermosas
+                                como el onix.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="assest/img/Joya.jpeg" class="d-block w-100" alt="img-thumbnail">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="color: beige;">pendientes</h5>
+                            <p style="color: beige;">Dentro de la coleccion que disponemos, tenemos una gran gama de
+                                pendientes para todos los
+                                gustos.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assest/img/mixJoya.jpeg" class="d-block w-100" alt="img-thumbnail">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 id="hw" style="color: beige;">mixJoya</h5>
+                            <p id="hw" style="color: beige;">Gran gama de anillos.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="assest/img/Joya.jpeg" class="d-block w-100" alt="img-thumbnail">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>pendientes</h5>
-                        <p>Dentro de la coleccion que disponemos, tenemos una gran gama de pendientes para todos los
-                            gustos.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="assest/img/mixJoya.jpeg" class="d-block w-100" alt="img-thumbnail">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
 
 
     </section>
-
-
     <section id="redSocial">
-        <div class="text-center">
-            <h1>Coleccion Joyas 2023.</h1><br>
-            <p>muchas de nustras colecciones son unicas y personalizada,</p>
-            <img src="assest/img/Joya.jpeg" class="rounded" alt="img" width="300" height="300"><br>
-            <h2>Algunas de nuestras colecciones.</h2>
-            <h3>para los distintos gustos y estilos.</h3>
-            <img src="assest/img/colgante.jpeg" class="rounded" alt="img" width="300" height="300">
-            <img src="assest/img/aros.jpeg" class="rounded" alt="img" width="300" height="300"><br>
-            <br>
-            <div class="ratio" style="--bs-aspect-ratio: 50%;">
-                <iframe src="https://www.youtube.com/embed/5aShTpbFly0" title="YouTube video" allowfullscreen></iframe>
-            </div>
-            <div class="shared-panel" style="text-align: right;">
-                <h3>Redes Sociales</h3>
-                <p>Aqui puedes encontrar nuestras redes sociales.<br>
-                    tanto Instagram Como Youtube.<br>
-                    no dudes en contactarnos atravez de instagram.
-                </p>
+        <div class="shared-panel" style="text-align: right;">
+            <h3>Redes Sociales</h3>
+            <p>Aqui puedes encontrar nuestras redes sociales.<br>
+                tanto Instagram Como Youtube.<br>
+                no dudes en contactarnos atravez de instagram.
+            </p>
 
 
-                <!-- Youtube -->
-                <img src="assest/img/logoyou-removebg-preview.png" class="img-thumbnail" alt="img-thumbnail" width="60"
-                    height="70">
-                <a font-family: fantasy;" href="https://www.youtube.com/@SaturninaJoyas-wv3he" role="button"><i
-                        class="fab fa-youtube fa-lg">Youtube</i></a><br>
+            <!-- Youtube -->
+            <img src="assest/img/logoyou-removebg-preview.png" class="img-thumbnail" alt="img-thumbnail" width="60"
+                height="70">
+            <a href="https://www.youtube.com/@SaturninaJoyas-wv3he" role="button"><i
+                    class="fab fa-youtube fa-lg">Youtube</i></a><br>
 
-                <!-- Instagram -->
-                <img src="assest/img/imgInsta.avif" class="img-thumbnail" alt="img-thumbnail" width="50" height="60">
-                <a font-family: fantasy; " href=" https://www.instagram.com/saturninajoyas/" role="button"><i
-                        class="fab fa-instagram fa-lg">Instagram</i></a>
+            <!-- Instagram -->
+            <img src="assest/img/imgInsta.avif" class="img-thumbnail" alt="img-thumbnail" width="50" height="60">
+            <a href=" https://www.instagram.com/saturninajoyas/" role="button"><i
+                    class="fab fa-instagram fa-lg">Instagram</i></a>
 
-            </div>
+        </div>
 
     </section>
 
@@ -217,64 +227,93 @@
 
     <section id="formulario">
         <form action="" method="post" id="mi_formulario">
-            <h1> Formulario</h1>
-            <div class="Register"><label>Usuario: </label><input type="text" id="nombre" name="user" autocomplete="off"
-                    placeholder="Usuario"><br>
-            </div>
-            <div>
-                <label> Sube un archivo:</label> <input type="file" id="archivo" name="file"><br>
-            </div>
-            <div>
-                <label>Email:</label><input type="email" id="email" name="correo" placeholder="ejemplo@ejemplo.com"
-                    autocomplete="off"><br>
-            </div>
-            <div class="selectGen">
-                <label for="gen-selection">Selecciona tu genero:</label> <select id="gen" name="genero" required>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="trans">Trans</option>
-                    <option value="binario">Binario</option>
-                    <option value="otros">Otros</option>
-                </select>
-            </div>
-            <div>
-                <span>Fecha de nacimiento:</span>
-                <input type="date" id="nacimiento" name="nacimiento" required min="1933-01-01">
-            </div>
+            <div class="container">
+                <h1> Formulario</h1>
+                <div class="Register"><label>Usuario: </label><input type="text" id="nombre" name="user"
+                        pattern="[a-z]{1,15}" placeholder="Usuario"><br>
+                </div>
+                <div>
+                    <label> Sube un archivo:</label> <input type="file" id="archivo" name="file"><br>
+                </div>
+                <div>
+                    <label>Email:</label><input type="email" id="email" name="correo" placeholder="ejemplo@ejemplo.com"
+                        autocomplete="off"><br>
+                </div>
+                <div class="selectGen">
+                    <label for="gen-selection">Selecciona tu genero:</label> <select id="gen" name="genero" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="trans">Trans</option>
+                        <option value="binario">Binario</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Fecha de nacimiento:</span>
+                    <input type="date" id="nacimiento" name="nacimiento" required min="1933-01-01">
+                </div>
 
-            <div>
-                <span>Ingresa tu numero telefonico:</span>
-                <input type="tel" id="cell" name="phone" placeholder="(Código de área) Número"
-                    pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" list="listatelefonos" required />
-            </div>
+                <div>
+                    <span>Ingresa tu numero telefonico:</span>
+                    <input type="tel" id="cell" name="phone" placeholder="(Código de área) Número"
+                        pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" list="listatelefonos" required />
+                </div>
 
 
 
-            <div class="intereses">
-                <label for="checkPlant"><span id="cb_validation"> Seleccione al menos 3 tipos de plantas:</span>
-                </label>
-                <input type="checkbox" name="opciones[]" value="Cactus">
-                <label for="cactus"><span> Cactus</span></label>
-                <input type="checkbox" name="opciones[]" value="suculentas">
-                <label for="succulents"><span> suculentas</span></label>
-                <input type="checkbox" name="opciones[]" value="Frutales">
-                <label for="fruits"><span> frutales</span></label>
-                <input type="checkbox" name="opciones[]" value="Musgo">
-                <label for="moss"><span>Musgo</span></label>
-                <input type="checkbox" name="opciones[]" value="alga">
-                <label for="algae"><span>Algas marinas</span></label>
-                <input type="checkbox" name="opciones[]" value="herbaceas">
-                <label for="herbaceous"><span>Herbáceas</span></label>
-            </div>
+                <div class="intereses">
+                    <label for="checkPlant"><span id="cb_validation"> Seleccione al menos 3 tipos de plantas:</span>
+                    </label>
+                    <input type="checkbox" name="opciones[]" value="Cactus">
+                    <label for="cactus"><span> Cactus</span></label>
+                    <input type="checkbox" name="opciones[]" value="suculentas">
+                    <label for="succulents"><span> suculentas</span></label>
+                    <input type="checkbox" name="opciones[]" value="Frutales">
+                    <label for="fruits"><span> frutales</span></label>
+                    <input type="checkbox" name="opciones[]" value="Musgo">
+                    <label for="moss"><span>Musgo</span></label>
+                    <input type="checkbox" name="opciones[]" value="alga">
+                    <label for="algae"><span>Algas marinas</span></label>
+                    <input type="checkbox" name="opciones[]" value="herbaceas">
+                    <label for="herbaceous"><span>Herbáceas</span></label>
+                </div>
 
-            <div class="buttonRegister">
-                <button type="button" id="btnRegister">Enviar</button>
-                <span id="sBtnAccion">
+                <div>
+                    <textarea name="textarea" id="descripcion" rows="10" cols="50"
+                        placeholder="dejanos un mensaje:"></textarea>
+                </div>
+                <div class="buttonRegister">
+                    <button type="button" id="btnRegister">Enviar</button>
+                    <span id="sBtnAccion">
 
+                    </span>
+                </div>
+                <span role="alert" id="nombreError" aria-hidden="true">
+                    Ingrese su nombre, por favor
                 </span>
-            </div>
+                <span role="alert" id="archivoError" aria-hidden="true">
+                    Ingrese un archivo, que sea valido por favor.
+                </span>
+                <span role="alert" id="correoError" aria-hidden="true">
+                    Ingrese un correo valido, por favor
+                </span>
+                <span role="alert" id="genError" aria-hidden="true">
+                    la opcion ingresada no es valida.
+                </span>
+                <span role="alert" id="cumpleError" aria-hidden="true">
+                    la fecha de nacimiento no coincide con los regristro, ingrese un dato valido.
+                </span>
+                <span role="alert" id="cellError" aria-hidden="true">
+                    numero ingresado no es valido.
+                </span>
+                <span role="alert" id="checkError" aria-hidden="true">
+                    leccione los checkbox correspondiente.
+                </span>
+                <span role="alert" id="descripError" aria-hidden="true">
+                    ingrese un comentario valido y respetando a los demas.
+                </span>
         </form>
-      
+        </div>
     </section>
     <datalist id="listatelefonos">
 
@@ -292,13 +331,12 @@
 
     </div>
     <script src="assest/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
-        integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
